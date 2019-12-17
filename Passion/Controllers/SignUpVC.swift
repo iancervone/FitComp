@@ -145,20 +145,20 @@ class SignUpVC: UIViewController {
   }
   
   private func handleCreatedUserInFirestore(result: Result<(), Error>) {
-//      switch result {
-//      case .success:
-//          guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-//              let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window
-//              else {
-//                  return
-//          }
-//
-//          UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromBottom, animations: {
-//                  window.rootViewController = FavoritesVC()
-//          }, completion: nil)
-//      case .failure(let error):
-//          self.showAlert(with: "Error creating user", and: "An error occured while creating new account \(error)")
-//      }
+      switch result {
+      case .success:
+          guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window
+              else {
+                  return
+          }
+
+          UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromBottom, animations: {
+                  window.rootViewController = ProfileVC()
+          }, completion: nil)
+      case .failure(let error):
+          self.showAlert(with: "Error creating user", and: "An error occured while creating new account \(error)")
+      }
   }
     
     //MARK: UI Setup

@@ -138,28 +138,28 @@ class LoginVC: UIViewController {
     }
 
     private func handleLoginResponse(with result: Result<(), Error>) {
-//        switch result {
-//        case .failure(let error):
-//            showAlert(with: "Error", and: "Could not log in. Error: \(error)")
-//        case .success:
-//            let nextVC = TabBarVC()
-//            print("button pressed")
-//            nextVC.modalPresentationStyle = .fullScreen
-//            present(nextVC, animated: true, completion: nil)
+        switch result {
+        case .failure(let error):
+            showAlert(with: "Error", and: "Could not log in. Error: \(error)")
+        case .success:
+            let nextVC = ProfileVC()
+            print("button pressed")
+            nextVC.modalPresentationStyle = .fullScreen
+            present(nextVC, animated: true, completion: nil)
+
+//            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,Fire
+//                let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window
+//                else {
+//                    //MARK: TODO - handle could not swap root view controller
+//                    return
+//            }
 //
-////            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,Fire
-////                let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window
-////                else {
-////                    //MARK: TODO - handle could not swap root view controller
-////                    return
-////            }
-////
-////            //MARK: TODO - refactor this logic into scene delegate
-////            //MARK: MAKE ANIMATION SLIDE FROM LEFT TO RIGHT
-////            UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromBottom, animations: {
-////                    window.rootViewController = ChooseExperienceVC()
-////            }, completion: nil)
-//        }
+//            //MARK: TODO - refactor this logic into scene delegate
+//            //MARK: MAKE ANIMATION SLIDE FROM LEFT TO RIGHT
+//            UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromBottom, animations: {
+//                    window.rootViewController = ChooseExperienceVC()
+//            }, completion: nil)
+        }
     }
     
 //MARK: UI Setup
