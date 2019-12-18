@@ -8,22 +8,25 @@ class ProfileVC: UIViewController {
 //    return item
 //  }()
 //
-//lazy var searchBar: UISearchBar = {
-//           let sb = UISearchBar()
-//           sb.text = "enter the name of a piece"
-//           return sb
-//         }()
+//  lazy var searchBar: UISearchBar = {
+//     let sb = UISearchBar()
+//     sb.text = "enter the name of a piece"
+//     return sb
+//  }()
   
   lazy var profilePic: UIImageView = {
     let pic = UIImageView()
     pic.image = UIImage(named: "chalkClap.png")!
-//    pic.layer.cornerRadius = pic.frame.size.height/2
-    pic.layer.borderWidth = 1.0
-    pic.layer.borderColor = #colorLiteral(red: 0, green: 0.3761399504, blue: 1, alpha: 1)
-//    pic.layer.masksToBounds = true
-//    pic.clipsToBounds = true
+    pic.layer.cornerRadius = (view.frame.size.width / 1.2) / 2
+    pic.layer.borderWidth = 3
+    pic.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    pic.layer.masksToBounds = true
+//    pic.clipsToBounds = false
     return pic
   }()
+  
+//  pic.layer.cornerRadius = pic.frame.size.width / 2
+
   
   lazy var  nameLabel: UILabel = {
    let label = UILabel()
@@ -57,9 +60,17 @@ class ProfileVC: UIViewController {
     }()
   
   lazy var profileCollectionView: UICollectionView = {
-    let cv = UICollectionView()
+    let layout = UICollectionViewFlowLayout()
+    let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+    layout.scrollDirection = .horizontal
+    cv.backgroundColor = .clear
+    cv.dataSource = self
+    cv.delegate = self
+    cv.register(ProfileCVCell.self, forCellWithReuseIdentifier: "profileCell")
     return cv
   }()
+  
+  
   
   
     override func viewDidLoad() {
@@ -68,8 +79,18 @@ class ProfileVC: UIViewController {
       setupViews()
     }
   
+  private func applyshadowWithCorner(containerView : UIImageView){
+    containerView.clipsToBounds = true
+    containerView.layer.shadowColor = UIColor.black.cgColor
+    containerView.layer.shadowOpacity = 1
+    containerView.layer.shadowOffset = CGSize.init(width: 400, height: 300)
+    containerView.layer.shadowRadius = 1
+    containerView.layer.shadowPath = UIBezierPath(roundedRect: containerView.bounds, cornerRadius: 0).cgPath
+  }
+  
   private func setupViews() {
     profilePicSetup()
+//    applyshadowWithCorner(containerView: profilePic)
     nameLabelSetup()
     counterStackViewSetup()
     profileCollectionViewSetup()
@@ -81,8 +102,8 @@ class ProfileVC: UIViewController {
     NSLayoutConstraint.activate([
       profilePic.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60),
       profilePic.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-      profilePic.widthAnchor.constraint(equalToConstant: view.frame.size.width / 1.5),
-      profilePic.heightAnchor.constraint(equalToConstant: view.frame.size.width / 1.5)
+      profilePic.widthAnchor.constraint(equalToConstant: view.frame.size.width / 1.2),
+      profilePic.heightAnchor.constraint(equalToConstant: view.frame.size.width / 1.2)
     ])
 //    profilePic.layer.cornerRadius = profilePic.frame.height/2
   }
@@ -119,11 +140,45 @@ class ProfileVC: UIViewController {
     view.addSubview(profileCollectionView)
     profileCollectionView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      profileCollectionView.bottomAnchor.constraint(equalTo:view .safeAreaLayoutGuide.bottomAnchor, constant: -20),
+      profileCollectionView.bottomAnchor.constraint(equalTo:view .safeAreaLayoutGuide.bottomAnchor, constant: 0),
       profileCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      profileCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-      profileCollectionView.heightAnchor.constraint(equalToConstant: 100)
+      profileCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
+      profileCollectionView.heightAnchor.constraint(equalToConstant: 150)
     ])
   }
   
 }
+
+extension ProfileVC: UICollectionViewDataSource {
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+          return(25)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath) as! ProfileCVCell
+        return cell
+    }
+//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//      return CGSize(width: 200, height: 200)
+//  }
+  
+  }
+
+
+extension ProfileVC: UICollectionViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+
+        }
+    }
+}
+
+extension ProfileVC: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let cellSize = CGSize(width: 130, height: 130)
+        return cellSize
+    }
+}
+
+

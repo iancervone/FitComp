@@ -25,8 +25,8 @@ class TabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "heart"), tag: 0)
-        createVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "calendar"), tag: 1)
-        compsVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "Fit Comps"), tag: 2)
+        createVC.tabBarItem = UITabBarItem(title: "Create", image: UIImage(systemName: "calendar"), tag: 1)
+        compsVC.tabBarItem = UITabBarItem(title: "Fit Comps", image: UIImage(systemName: "Fit Comps"), tag: 2)
         self.viewControllers = [profileVC, createVC, compsVC]
     }
 }
