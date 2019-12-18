@@ -15,7 +15,7 @@ class ProfileCVCell: UICollectionViewCell {
   lazy var cellNameLabel: UILabel = {
     let label = UILabel()
     label.text = "Ian Cervone"
-    label.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+    label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     label.textAlignment = .center
     return label
   }()

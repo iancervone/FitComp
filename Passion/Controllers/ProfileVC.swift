@@ -1,18 +1,34 @@
 import UIKit
 
 class ProfileVC: UIViewController {
-  
-//  lazy var barItem: UIBarButtonItem = {
-//    let item = UIBarButtonItem()
-//    self.navigationItem.titleView = self.searchBar
-//    return item
+//
+////  lazy var barItem: UIBarButtonItem = {
+////    let item = UIBarButtonItem()
+////    self.navigationItem.titleView = self.searchBar
+////    return item
+////  }()
+//
+//  lazy var navBar: UINavigationBar = {
+//  let nav = UINavigationBar(frame: CGRect(x: 0, y: 0, width: 320, height: 44))
+////      nav = UINavigationItem(title: "")
+//    let search = UINavigationItem()
+//  let edit = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: nil, action: #selector(selectorName:))
+//  navItem.rightBarButtonItem = edit
+//
+//  navBar.setItems([nav], animated: false)
+//    return nav
 //  }()
 //
-//  lazy var searchBar: UISearchBar = {
-//     let sb = UISearchBar()
-//     sb.text = "enter the name of a piece"
-//     return sb
-//  }()
+  
+  lazy var searchBar: UISearchBar = {
+    let sb = UISearchBar(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
+     sb.text = "enter the name of a piece"
+//      sb.sizeToFit()
+//
+      navigationItem.titleView = sb
+
+     return sb
+  }()
   
   lazy var profilePic: UIImageView = {
     let pic = UIImageView()
@@ -77,7 +93,25 @@ class ProfileVC: UIViewController {
       super.viewDidLoad()
       view.backgroundColor = .gray
       setupViews()
-    }
+//      navigationItem.titleView = searchBar
+    
+  
+  self.setNavigationBar()
+  }
+
+  func setNavigationBar() {
+    let screenSize: CGRect = UIScreen.main.bounds
+    let navBar = UINavigationBar(frame: CGRect(x: 0, y: 35, width: screenSize.width, height: 144))
+    let navItem = UINavigationItem(title: "")
+    let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.edit, target: nil, action: #selector(done))
+      navItem.rightBarButtonItem = doneItem
+      navBar.setItems([navItem], animated: false)
+      self.view.addSubview(navBar)
+  }
+
+  @objc func done() { // remove @objc for Swift 3
+
+  }
   
   private func applyshadowWithCorner(containerView : UIImageView){
     containerView.clipsToBounds = true
