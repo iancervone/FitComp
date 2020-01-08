@@ -102,7 +102,7 @@ class ProfileVC: UIViewController {
   func setNavigationBar() {
     let screenSize: CGRect = UIScreen.main.bounds
     let navBar = UINavigationBar(frame: CGRect(x: 0, y: 35, width: screenSize.width, height: 144))
-    let navItem = UINavigationItem(title: "")
+    let navItem = UINavigationItem(title: "PROFILE")
     let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.edit, target: nil, action: #selector(done))
       navItem.rightBarButtonItem = doneItem
       navBar.setItems([navItem], animated: false)
