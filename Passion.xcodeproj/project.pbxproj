@@ -17,13 +17,19 @@
 		3C14A4DE23A8B63500C78B9A /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C14A4DD23A8B63500C78B9A /* SignUpVC.swift */; };
 		3C1748F823A7723200B054FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1748F723A7723200B054FD /* AppDelegate.swift */; };
 		3C1748FA23A7723200B054FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1748F923A7723200B054FD /* SceneDelegate.swift */; };
-		3C1748FF23A7723200B054FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C1748FD23A7723200B054FD /* Main.storyboard */; };
 		3C17490223A7723200B054FD /* Passion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3C17490023A7723200B054FD /* Passion.xcdatamodeld */; };
 		3C17490423A7723500B054FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C17490323A7723500B054FD /* Assets.xcassets */; };
 		3C17490723A7723500B054FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C17490523A7723500B054FD /* LaunchScreen.storyboard */; };
 		3C17491223A7723500B054FD /* PassionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C17491123A7723500B054FD /* PassionTests.swift */; };
 		3C17492323A8A3B900B054FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C17492223A8A3B900B054FD /* GoogleService-Info.plist */; };
 		3C6175B123A8BEA300DB8C80 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6175B023A8BEA300DB8C80 /* AppColors.swift */; };
+		3C6175B323A8D47B00DB8C80 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6175B223A8D47B00DB8C80 /* ProfileVC.swift */; };
+		3C6175B523A8D5EF00DB8C80 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6175B423A8D5EF00DB8C80 /* TabBarVC.swift */; };
+		3C6175B723A8D77900DB8C80 /* CompsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6175B623A8D77900DB8C80 /* CompsVC.swift */; };
+		3C6175B923A8D7BB00DB8C80 /* CreateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6175B823A8D7BB00DB8C80 /* CreateVC.swift */; };
+		3C6175BB23A9BF2F00DB8C80 /* ProfileCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6175BA23A9BF2F00DB8C80 /* ProfileCVCell.swift */; };
+		3CE53BD023C4D0CF006D3AB9 /* OnboardSportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE53BCF23C4D0CF006D3AB9 /* OnboardSportVC.swift */; };
+		3CE53BD223C501CE006D3AB9 /* CompsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE53BD123C501CE006D3AB9 /* CompsCVC.swift */; };
 		EE83E30B7646B2A413CE7E05 /* Pods_Passion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E861CAA6C90F2AF12F687FCB /* Pods_Passion.framework */; };
 		FC8D5BA22946D8B3FE6E330F /* Pods_PassionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99F9B140E338677DF6CADC61 /* Pods_PassionTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,7 +57,6 @@
 		3C1748F423A7723200B054FD /* Passion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1748F723A7723200B054FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C1748F923A7723200B054FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C1748FE23A7723200B054FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C17490123A7723200B054FD /* Passion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Passion.xcdatamodel; sourceTree = "<group>"; };
 		3C17490323A7723500B054FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C17490623A7723500B054FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +66,13 @@
 		3C17491323A7723500B054FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C17492223A8A3B900B054FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3C6175B023A8BEA300DB8C80 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		3C6175B223A8D47B00DB8C80 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		3C6175B423A8D5EF00DB8C80 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		3C6175B623A8D77900DB8C80 /* CompsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompsVC.swift; sourceTree = "<group>"; };
+		3C6175B823A8D7BB00DB8C80 /* CreateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateVC.swift; sourceTree = "<group>"; };
+		3C6175BA23A9BF2F00DB8C80 /* ProfileCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCVCell.swift; sourceTree = "<group>"; };
+		3CE53BCF23C4D0CF006D3AB9 /* OnboardSportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardSportVC.swift; sourceTree = "<group>"; };
+		3CE53BD123C501CE006D3AB9 /* CompsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompsCVC.swift; sourceTree = "<group>"; };
 		8B0A3126AE88890BFA5E8F6A /* Pods-PassionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PassionTests.release.xcconfig"; path = "Target Support Files/Pods-PassionTests/Pods-PassionTests.release.xcconfig"; sourceTree = "<group>"; };
 		99F9B140E338677DF6CADC61 /* Pods_PassionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PassionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FD5CA8C2AC5760C2F257A4 /* Pods-Passion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Passion.debug.xcconfig"; path = "Target Support Files/Pods-Passion/Pods-Passion.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +129,6 @@
 				3C17492023A8A30200B054FD /* Helpers */,
 				3C17491F23A8A2E200B054FD /* Firebase */,
 				3C17492123A8A30F00B054FD /* Supporting */,
-				3C1748FD23A7723200B054FD /* Main.storyboard */,
 				3C17490323A7723500B054FD /* Assets.xcassets */,
 				3C17490823A7723500B054FD /* Info.plist */,
 				3C17490023A7723200B054FD /* Passion.xcdatamodeld */,
@@ -149,6 +160,11 @@
 			children = (
 				3C14A4DD23A8B63500C78B9A /* SignUpVC.swift */,
 				3C14A4DB23A8B5FF00C78B9A /* LoginVC.swift */,
+				3C6175B423A8D5EF00DB8C80 /* TabBarVC.swift */,
+				3C6175B223A8D47B00DB8C80 /* ProfileVC.swift */,
+				3C6175B623A8D77900DB8C80 /* CompsVC.swift */,
+				3C6175B823A8D7BB00DB8C80 /* CreateVC.swift */,
+				3CE53BCF23C4D0CF006D3AB9 /* OnboardSportVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -156,6 +172,8 @@
 		3C17491E23A8A2D000B054FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C6175BA23A9BF2F00DB8C80 /* ProfileCVCell.swift */,
+				3CE53BD123C501CE006D3AB9 /* CompsCVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,7 +313,6 @@
 			files = (
 				3C17490723A7723500B054FD /* LaunchScreen.storyboard in Resources */,
 				3C17490423A7723500B054FD /* Assets.xcassets in Resources */,
-				3C1748FF23A7723200B054FD /* Main.storyboard in Resources */,
 				3C17492323A8A3B900B054FD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,14 +395,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6175B523A8D5EF00DB8C80 /* TabBarVC.swift in Sources */,
+				3C6175BB23A9BF2F00DB8C80 /* ProfileCVCell.swift in Sources */,
 				3C14A4D623A8B49800C78B9A /* AppUser.swift in Sources */,
+				3CE53BD023C4D0CF006D3AB9 /* OnboardSportVC.swift in Sources */,
 				3C6175B123A8BEA300DB8C80 /* AppColors.swift in Sources */,
 				3C14A4D023A8B46000C78B9A /* FirebaseAuthService.swift in Sources */,
 				3C14A4DA23A8B57100C78B9A /* ImageHelper.swift in Sources */,
 				3C14A4DE23A8B63500C78B9A /* SignUpVC.swift in Sources */,
+				3C6175B923A8D7BB00DB8C80 /* CreateVC.swift in Sources */,
+				3CE53BD223C501CE006D3AB9 /* CompsCVC.swift in Sources */,
+				3C6175B723A8D77900DB8C80 /* CompsVC.swift in Sources */,
 				3C14A4D423A8B47C00C78B9A /* FirestoreService.swift in Sources */,
 				3C14A4DC23A8B5FF00C78B9A /* LoginVC.swift in Sources */,
 				3C17490223A7723200B054FD /* Passion.xcdatamodeld in Sources */,
+				3C6175B323A8D47B00DB8C80 /* ProfileVC.swift in Sources */,
 				3C14A4D823A8B51500C78B9A /* AppError.swift in Sources */,
 				3C1748F823A7723200B054FD /* AppDelegate.swift in Sources */,
 				3C14A4D223A8B46A00C78B9A /* Validation.swift in Sources */,
@@ -412,14 +436,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3C1748FD23A7723200B054FD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3C1748FE23A7723200B054FD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3C17490523A7723500B054FD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
